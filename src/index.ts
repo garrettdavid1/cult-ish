@@ -1,2 +1,2 @@
-const greeting: string = "Hello, TypeScript!";
-console.log(greeting);
+const greeting = 'Hello, TypeScript!'
+console.log(greeting)

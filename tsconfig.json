@@ -1,24 +1,26 @@
 {
-  "compilerOptions": {
-  "module": "commonjs",
-  "allowSyntheticDefaultImports": true,
-  "esModuleInterop": true,
-  "strict": true,
-      "target": "es2021",
-      "noImplicitAny": true,
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "outDir": "./dist",
-      "baseUrl": ".",
-      "paths": {
-          "*": [
-              "node_modules/*"
-          ]
-      },
-      "lib": ["es2017"],
-      "skipLibCheck": true
-  },
-  "include": [
-      "src/**/*"
-  ]
+	"compilerOptions": {
+		"module": "commonjs",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"strict": true,
+		"target": "es2021",
+		"noImplicitAny": true,
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"baseUrl": ".",
+		"paths": {
+			"*": ["node_modules/*"]
+		},
+		"lib": ["es2017"],
+		"skipLibCheck": true,
+		"plugins": [
+			{
+				"name": "@typescript-eslint/eslint-plugin"
+			}
+		]
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "**/*.spec.ts", ".eslintrc.js"]
 }

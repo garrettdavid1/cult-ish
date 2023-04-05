@@ -1,30 +1,38 @@
 {
-  "name": "cult-ish",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc",
-    "prestart": "npm run build",
-    "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/garrettdavid1/cult-ish.git"
-  },
-  "author": "All Day Dev Community",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/garrettdavid1/cult-ish/issues"
-  },
-  "homepage": "https://github.com/garrettdavid1/cult-ish#readme",
-  "devDependencies": {
-    "tslint": "^6.1.3",
-    "typescript": "^5.0.3"
-  },
-  "dependencies": {
-    "@types/node": "^18.15.11"
-  }
+	"name": "cult-ish",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prebuild": "npm run lint",
+		"build": "tsc",
+		"prestart": "npm run build",
+		"start": "node dist/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint --fix .",
+		"prettier": "prettier --write 'src/**/*ts'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/garrettdavid1/cult-ish.git"
+	},
+	"author": "All Day Dev Community",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/garrettdavid1/cult-ish/issues"
+	},
+	"homepage": "https://github.com/garrettdavid1/cult-ish#readme",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "5.57.1",
+		"@typescript-eslint/parser": "5.57.1",
+		"eslint": "8.37.0",
+		"eslint-config-prettier": "8.8.0",
+		"eslint-plugin-prettier": "4.2.1",
+		"prettier": "2.8.7",
+		"prettier-eslint": "15.0.1",
+		"typescript": "5.0.3"
+	},
+	"dependencies": {
+		"@types/node": "18.15.11"
+	}
 }
