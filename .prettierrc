@@ -1,7 +1,13 @@
 {
-	"semi": false,
-	"arrowParens": "always",
-	"singleQuote": true,
-	"htmlWhitespaceSensitivity": "ignore",
-	"useTabs": true
+  "semi": false,
+  "arrowParens": "always",
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "trailingComma": "all",
+  "useTabs": true,
+  "tabWidth": 4,
+  "function-call-argument-newline": [
+    "error",
+    "multiline"
+  ]
 }
