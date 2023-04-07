@@ -5,6 +5,6 @@ services:
     ports:
       - 5432:5432
     env_file:
-      - database.env # configure postgres
+      - .env # configure postgres
     volumes: 
       - C:\Docker\PostgreSql\data\cult-ish:/var/lib/postgresql/data
