@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Cult {
+  id                    String    @id @default(uuid())
+  name                  String
+  memberCount           Int
+  leader                String
+  experience            Int
+  level                 Int
+  minions               Minion[]
+}
+
+model Minion {
+  id                    String    @id @default(uuid())
+  name                  String
+  favor                 Int
+  experience            Int
+  cultId                String
+  cult                  Cult      @relation(fields: [cultId], references: [id])
+  rankId                String
+  rank                  Rank      @relation(fields: [rankId], references: [id])
+}
+
+model Rank {
+  id                    String    @id @default(uuid())
+  name                  String
+  ordinal               Int
+  experienceRequirement Int
+  minions               Minion[]
+  incantations          Incantation[]
+}
+
+model Incantation {
+  id                    String    @id @default(uuid())
+  name                  String
+  description           String
+  unlockRankId                String
+  unlockRank            Rank      @relation(fields: [unlockRankId], references: [id])
+  favorCost             Int
+  experienceReward      Int
+}
